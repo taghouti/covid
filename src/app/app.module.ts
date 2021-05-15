@@ -22,11 +22,13 @@ import { MatSliderModule } from '@angular/material/slider';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatButtonToggleModule } from '@angular/material/button-toggle';
 import { MatSelectModule } from '@angular/material/select';
+import { CasesDetailsComponent } from './cases-details/cases-details.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    CasesComponent
+    CasesComponent,
+    CasesDetailsComponent
   ],
   imports: [
     BrowserModule,
