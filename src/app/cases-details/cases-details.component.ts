@@ -33,6 +33,20 @@ export class CasesDetailsComponent implements OnInit {
       });
   }
 
+  deleteCases(id: any): void {
+    this.isLoadingResults = true;
+    // noinspection JSUnusedLocalSymbols
+    this.api.deleteCases(id)
+      .subscribe(res => {
+          this.isLoadingResults = false;
+          this.router.navigate(['/cases']).then(r => console.log(r));
+        }, (err) => {
+          console.log(err);
+          this.isLoadingResults = false;
+        }
+      );
+  }
+
   ngOnInit(): void {
     this.getCasesDetails(this.route.snapshot.params.id);
   }
