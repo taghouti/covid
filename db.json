@@ -1,0 +1,15 @@
+{
+  "cases": [
+    {
+      "id": 1,
+      "name": "Jhon doe",
+      "gender": "Male",
+      "age": 50,
+      "address": "8 Street x",
+      "city": "Tunis",
+      "country": "Tunisia",
+      "status": "Positive",
+      "updated": "2020/12/5"
+    }
+  ]
+}
