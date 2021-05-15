@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ApiService } from '../services/api.service';
 
 @Component({
   selector: 'app-cases',
@@ -7,7 +8,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CasesComponent implements OnInit {
 
-  constructor() { }
+  constructor(private api: ApiService) {
+    this.api = api;
+  }
 
   ngOnInit(): void {
   }
