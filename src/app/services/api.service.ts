@@ -9,6 +9,7 @@ const httpOptions = {
 };
 
 const apiUrl = '/api/';
+const casesApiUrl = apiUrl + 'cases/';
 
 @Injectable({
   providedIn: 'root'
@@ -20,7 +21,7 @@ export class ApiService {
     this.http = http;
   }
 
-  private handleError<T>(operation = 'operation', result?: T): (error: any) => Observable<T> {
+  private handleError<T>(result?: T): (error: any) => Observable<T> {
     return (error: any): Observable<T> => {
       console.error(error);
       return of(result as T);
@@ -28,41 +29,42 @@ export class ApiService {
   }
 
   getCases(): Observable<Cases[]> {
-    return this.http.get<Cases[]>(`${apiUrl}`)
+    // noinspection JSUnusedLocalSymbols
+    return this.http.get<Cases[]>(`${casesApiUrl}`)
       .pipe(
         tap(cases => console.log('fetched cases')),
-        catchError(this.handleError('getCases', []))
+        catchError(this.handleError([]))
       );
   }
 
   getCasesById(id: string): Observable<Cases> {
-    const url = `${apiUrl}/${id}`;
+    const url = `${casesApiUrl}/${id}`;
     return this.http.get<Cases>(url).pipe(
       tap(_ => console.log(`fetched cases id=${id}`)),
-      catchError(this.handleError<Cases>(`getCasesById id=${id}`))
+      catchError(this.handleError<Cases>())
     );
   }
 
   addCases(cases: Cases): Observable<Cases> {
-    return this.http.post<Cases>(apiUrl, cases, httpOptions).pipe(
+    return this.http.post<Cases>(casesApiUrl, cases, httpOptions).pipe(
       tap((c: Cases) => console.log(`added cases w/ id=${c.id}`)),
-      catchError(this.handleError<Cases>('addCases'))
+      catchError(this.handleError<Cases>())
     );
   }
 
   updateCases(id: string, cases: Cases): Observable<any> {
-    const url = `${apiUrl}/${id}`;
+    const url = `${casesApiUrl}/${id}`;
     return this.http.put(url, cases, httpOptions).pipe(
       tap(_ => console.log(`updated cases id=${id}`)),
-      catchError(this.handleError<any>('updateCases'))
+      catchError(this.handleError<any>())
     );
   }
 
   deleteCases(id: string): Observable<Cases> {
-    const url = `${apiUrl}/${id}`;
+    const url = `${casesApiUrl}/${id}`;
     return this.http.delete<Cases>(url, httpOptions).pipe(
       tap(_ => console.log(`deleted cases id=${id}`)),
-      catchError(this.handleError<Cases>('deleteCases'))
+      catchError(this.handleError<Cases>())
     );
   }
 }
