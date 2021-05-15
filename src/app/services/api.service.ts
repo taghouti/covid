@@ -8,7 +8,7 @@ const httpOptions = {
   headers: new HttpHeaders({'Content-Type': 'application/json'})
 };
 
-const apiUrl = '/api/';
+const apiUrl = 'http://localhost:3000/';
 const casesApiUrl = apiUrl + 'cases/';
 
 @Injectable({
