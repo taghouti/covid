@@ -1,8 +1,8 @@
 import {Component, OnInit} from '@angular/core';
 
 import {ActivatedRoute, Router} from '@angular/router';
-import {ApiService} from '../services/api.service';
-import {Cases} from '../models/cases';
+import {ApiService} from '../shared/api.service';
+import {Cases} from '../model/cases';
 import {DatePipe} from '@angular/common';
 
 @Component({
