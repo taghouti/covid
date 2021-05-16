@@ -52,7 +52,7 @@ export class ApiService {
     );
   }
 
-  updateCases(id: string, cases: Cases): Observable<any> {
+  updateCases(id: number, cases: Cases): Observable<any> {
     const url = `${casesApiUrl}/${id}`;
     return this.http.put(url, cases, httpOptions).pipe(
       tap(_ => console.log(`updated cases id=${id}`)),

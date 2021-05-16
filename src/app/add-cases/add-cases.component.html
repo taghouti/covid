@@ -1,11 +1,11 @@
 <div class="cases-container mat-elevation-z8">
-  <h2>Coronavirus Add Cases</h2>
+  <h2>Corona Virus Add Cases</h2>
   <div class="cases-loading-shade"
        *ngIf="isLoadingResults">
     <mat-spinner *ngIf="isLoadingResults"></mat-spinner>
   </div>
   <div class="button-row">
-    <a mat-flat-button color="primary" [routerLink]="['/cases']"><mat-icon>list</mat-icon></a>
+    <a mat-flat-button color="primary" [routerLink]="['/cases']"><mat-icon>restore</mat-icon> Go Back</a>
   </div>
   <mat-card class="cases-card">
     <form [formGroup]="casesForm" (ngSubmit)="onFormSubmit()">
