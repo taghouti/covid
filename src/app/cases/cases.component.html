@@ -7,22 +7,28 @@
   <mat-form-field class="cases-full-width">
     <mat-label>Gender</mat-label>
     <mat-select [(value)]="gender" (valueChange)="genderChanged()">
+      <!-- todo: (ngFor) Vous devez appliquer les directives de structures « *ngFor » et « *ngIf » -->
       <mat-option *ngFor="let gl of genderList" [value]="gl">
+        <!-- todo: (binding) interpolation -->
         {{gl}}
       </mat-option>
     </mat-select>
   </mat-form-field>
   <mat-form-field class="cases-full-width">
     <mat-label>Status</mat-label>
+    <!-- todo: (binding) event binding -->
     <mat-select [(value)]="status" (valueChange)="statusChanged()">
+      <!-- todo: (binding) property binding -->
       <mat-option *ngFor="let sl of statusList" [value]="sl">
         {{sl}}
       </mat-option>
     </mat-select>
   </mat-form-field>
+  <!-- todo: (search) Votre application doit contenir au moins une fonctionnalité de recherche multicritère -->
   <mat-form-field>
     <mat-label>Search</mat-label>
     <label>
+    <!-- todo: (binding) two way binding -->
     <input
       matInput
       [(ngModel)]="search"

@@ -4,6 +4,7 @@ import {ApiService} from '../shared/api.service';
 import {FormBuilder, FormControl, FormGroup, FormGroupDirective, NgForm, Validators} from '@angular/forms';
 import {ErrorStateMatcher} from '@angular/material/core';
 
+// todo: (template driven) Appliquez l’approches « Template driven Forms » dans votre projet
 export class MyErrorStateMatcher implements ErrorStateMatcher {
   isErrorState(control: FormControl | null, form: FormGroupDirective | NgForm | null): boolean {
     const isSubmitted = form && form.submitted;
@@ -38,6 +39,7 @@ export class AddCasesComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    // todo: (template driven) Appliquez l’approches « Template driven Forms » dans votre projet
     this.casesForm = this.formBuilder.group({
       name: [null, Validators.required],
       gender: [null, Validators.required],
@@ -49,6 +51,7 @@ export class AddCasesComponent implements OnInit {
     });
   }
 
+  // todo: (template driven) Appliquez l’approches « Template driven Forms » dans votre projet
   onFormSubmit(): void {
     this.isLoadingResults = true;
     this.api.addCases(this.casesForm.value)

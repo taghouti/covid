@@ -1,5 +1,6 @@
 <div class="cases-container mat-elevation-z8">
   <h2>Corona Virus Add Cases</h2>
+  <!-- todo: (ngIf) Vous devez appliquer les directives de structures « *ngFor » et « *ngIf » -->
   <div *ngIf="isLoadingResults"
        class="cases-loading-shade">
     <mat-spinner *ngIf="isLoadingResults"></mat-spinner>
@@ -14,6 +15,7 @@
       <mat-form-field class="cases-full-width">
         <label>
           <mat-label>Name</mat-label>
+          <!-- todo: (formControlName) Vous devez appliquer au moins une directive d’attribut à part la directive NgModel -->
           <input [errorStateMatcher]="matcher" formControlName="name" matInput
                  placeholder="Name">
         </label>
@@ -35,10 +37,12 @@
       <mat-form-field class="cases-full-width">
         <label>
           <mat-label>Age</mat-label>
+          <!-- todo: (template driven) Appliquez l’approches « Template driven Forms » dans votre projet -->
           <input [errorStateMatcher]="matcher" formControlName="age" matInput placeholder="Age"
                  type="number">
         </label>
         <mat-error>
+          <!-- todo: (template driven) Appliquez l’approches « Template driven Forms » dans votre projet -->
           <span *ngIf="!casesForm.get('age')?.valid && casesForm.get('age')?.touched">Please enter Age</span>
         </mat-error>
       </mat-form-field>

@@ -6,12 +6,14 @@ import {AddCasesComponent} from './add-cases/add-cases.component';
 import {EditCasesComponent} from './edit-cases/edit-cases.component';
 import {CasesStatComponent} from './cases-stat/cases-stat.component';
 
+// todo: (routing) Configurez les routes et liens nécessaires à votre application
 const routes: Routes = [
   {
     path: 'cases',
     component: CasesComponent,
     data: {title: 'List of Cases'}
   },
+  // todo: (routing) Vous devez exploiter au moins une route paramétrée
   {
     path: 'cases-details/:id',
     component: CasesDetailsComponent,

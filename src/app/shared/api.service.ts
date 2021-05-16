@@ -1,3 +1,6 @@
+// todo: (CRUD) Injectez le service crée au(x) bon(s) endroit(s) et appelez les différentes méthodes de
+// CRUD que vous avez créé. Il faut que toutes les méthodes créées dans le service
+// soient utilisées.
 import {Injectable} from '@angular/core';
 import {HttpClient, HttpHeaders} from '@angular/common/http';
 import {Observable, of} from 'rxjs';
@@ -23,6 +26,7 @@ export class ApiService {
     this.http = http;
   }
 
+  // todo: (search) Votre application doit contenir au moins une fonctionnalité de recherche multicritère
   getCases(name: string = '', status: string = '', gender: string = ''): Observable<Cases[]> {
     // noinspection JSUnusedLocalSymbols
     let like = '?';
@@ -49,6 +53,7 @@ export class ApiService {
       );
   }
 
+  // todo: (model) Créez un modèle de données pour lequel vous allez créer les méthodes CRUD
   getCasesById(id: string): Observable<Cases> {
     const url = `${casesApiUrl}/${id}`;
     return this.http.get<Cases>(url).pipe(
