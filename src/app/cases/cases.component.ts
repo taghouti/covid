@@ -13,13 +13,18 @@ export class CasesComponent implements OnInit {
   displayedColumns: string[] = ['name', 'age', 'status'];
   data: Cases[] = [];
   isLoadingResults = true;
+  search = '';
+  gender = '';
+  status = '';
+  statusList = ['All', 'Positive', 'Dead', 'Recovered'];
+  genderList = ['All', 'Male', 'Female'];
 
   constructor(private api: ApiService) {
     this.api = api;
   }
 
-  ngOnInit(): void {
-    this.api.getCases()
+  loadMatTable(): void {
+    this.api.getCases(this.search, this.status, this.gender)
       .subscribe((res: any) => {
         this.data = res;
         console.log(this.data);
@@ -28,6 +33,24 @@ export class CasesComponent implements OnInit {
         console.log(err);
         this.isLoadingResults = false;
       });
+  }
+
+  ngOnInit(): void {
+    this.loadMatTable();
+  }
+
+  callOnEnter($event: any): void {
+    if ($event.keyCode === 13) {
+      this.loadMatTable();
+    }
+  }
+
+  statusChanged(): void {
+    this.loadMatTable();
+  }
+
+  genderChanged(): void {
+    this.loadMatTable();
   }
 
 }

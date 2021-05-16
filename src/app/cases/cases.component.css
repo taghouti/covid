@@ -1,6 +1,9 @@
 .cases-container {
   position: relative;
-  padding: 5px;
-}
+  padding: 5px; }
+
+#search-icon {
+  margin-top: -24px;
+  float: right; }
 
 /*# sourceMappingURL=cases.component.css.map */

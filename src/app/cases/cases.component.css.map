@@ -1,9 +1,7 @@
 {
-  "version": 3,
-  "mappings": "AAAA,gBAAiB;EACf,QAAQ,EAAE,QAAQ;EAClB,OAAO,EAAE,GAAG",
-  "sources": [
-    "cases.component.scss"
-  ],
-  "names": [],
-  "file": "cases.component.css"
+"version": 3,
+"mappings": "AAAA,gBAAiB;EACf,QAAQ,EAAE,QAAQ;EAClB,OAAO,EAAE,GAAG;;AAEd,YAAa;EACX,UAAU,EAAE,KAAK;EACjB,KAAK,EAAE,KAAK",
+"sources": ["cases.component.scss"],
+"names": [],
+"file": "cases.component.css"
 }
