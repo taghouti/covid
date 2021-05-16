@@ -1,5 +1,5 @@
 export class Cases {
-  public id!: string;
+  public id!: number;
   public name!: string;
   public gender!: string;
   public age!: number;
