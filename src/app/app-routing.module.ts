@@ -4,7 +4,7 @@ import {CasesComponent} from './cases/cases.component';
 import {CasesDetailsComponent} from './cases-details/cases-details.component';
 import {AddCasesComponent} from './add-cases/add-cases.component';
 import {EditCasesComponent} from './edit-cases/edit-cases.component';
-import { CasesStatComponent } from './cases-stat/cases-stat.component';
+import {CasesStatComponent} from './cases-stat/cases-stat.component';
 
 const routes: Routes = [
   {
@@ -30,7 +30,7 @@ const routes: Routes = [
   {
     path: 'cases-stat',
     component: CasesStatComponent,
-    data: { title: 'Cases Statistic' }
+    data: {title: 'Cases Statistic'}
   }
 ];
 
