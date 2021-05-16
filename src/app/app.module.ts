@@ -24,13 +24,15 @@ import { MatButtonToggleModule } from '@angular/material/button-toggle';
 import { MatSelectModule } from '@angular/material/select';
 import { CasesDetailsComponent } from './cases-details/cases-details.component';
 import { AddCasesComponent } from './add-cases/add-cases.component';
+import { EditCasesComponent } from './edit-cases/edit-cases.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CasesComponent,
     CasesDetailsComponent,
-    AddCasesComponent
+    AddCasesComponent,
+    EditCasesComponent
   ],
   imports: [
     BrowserModule,
