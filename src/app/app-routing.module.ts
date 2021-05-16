@@ -4,6 +4,7 @@ import {CasesComponent} from './cases/cases.component';
 import {CasesDetailsComponent} from './cases-details/cases-details.component';
 import {AddCasesComponent} from './add-cases/add-cases.component';
 import {EditCasesComponent} from './edit-cases/edit-cases.component';
+import {CasesStatComponent} from './cases-stat/cases-stat.component';
 
 const routes: Routes = [
   {
@@ -25,6 +26,11 @@ const routes: Routes = [
     path: 'edit-cases/:id',
     component: EditCasesComponent,
     data: {title: 'Edit Cases'}
+  },
+  {
+    path: 'cases-stat',
+    component: CasesStatComponent,
+    data: {title: 'Cases Statistic'}
   }
 ];
 
