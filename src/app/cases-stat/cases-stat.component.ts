@@ -1,8 +1,8 @@
 import {Component, OnInit} from '@angular/core';
 import {ChartDataSets, ChartOptions, ChartType} from 'chart.js';
 import {Label} from 'ng2-charts';
-import {ApiService} from '../services/api.service';
-import {Statistic} from '../models/statistic';
+import {ApiService} from '../shared/api.service';
+import {Statistic} from '../model/statistic';
 
 @Component({
   selector: 'app-cases-stat',

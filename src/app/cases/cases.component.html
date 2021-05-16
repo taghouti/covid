@@ -4,6 +4,37 @@
        class="cases-loading-shade">
     <mat-spinner *ngIf="isLoadingResults"></mat-spinner>
   </div>
+  <mat-form-field class="cases-full-width">
+    <mat-label>Gender</mat-label>
+    <mat-select [(value)]="gender" (valueChange)="genderChanged()">
+      <mat-option *ngFor="let gl of genderList" [value]="gl">
+        {{gl}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+  <mat-form-field class="cases-full-width">
+    <mat-label>Status</mat-label>
+    <mat-select [(value)]="status" (valueChange)="statusChanged()">
+      <mat-option *ngFor="let sl of statusList" [value]="sl">
+        {{sl}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Search</mat-label>
+    <label>
+    <input
+      matInput
+      [(ngModel)]="search"
+      id="search"
+      (keyup)="callOnEnter($event)"
+      type="search"
+      class="form-control"
+      placeholder="Search name"
+    />
+    </label>
+    <mat-icon id="search-icon">search</mat-icon>
+  </mat-form-field>
   <div class="button-row">
     <a [routerLink]="['/add-cases']" color="primary" mat-flat-button>
       <mat-icon>add</mat-icon>

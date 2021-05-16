@@ -2,8 +2,8 @@ import {Injectable} from '@angular/core';
 import {HttpClient, HttpHeaders} from '@angular/common/http';
 import {Observable, of} from 'rxjs';
 import {catchError, tap} from 'rxjs/operators';
-import {Cases} from '../models/cases';
-import {Statistic} from '../models/statistic';
+import {Cases} from '../model/cases';
+import {Statistic} from '../model/statistic';
 
 const httpOptions = {
   headers: new HttpHeaders({'Content-Type': 'application/json'})
@@ -23,9 +23,26 @@ export class ApiService {
     this.http = http;
   }
 
-  getCases(): Observable<Cases[]> {
+  getCases(name: string = '', status: string = '', gender: string = ''): Observable<Cases[]> {
     // noinspection JSUnusedLocalSymbols
-    return this.http.get<Cases[]>(`${casesApiUrl}`)
+    let like = '?';
+    if (name) {
+      like += `name_like=(?<=.*)${name}(?=.*)`;
+    } else {
+      like += `name_like=(?<=.*)(?=.*)`;
+    }
+    if (status && status !== 'All') {
+      like += `&status=${status}`;
+    } else {
+      like += ``;
+    }
+    if (gender && gender !== 'All') {
+      like += `&gender=${gender}`;
+    } else {
+      like += ``;
+    }
+    // noinspection JSUnusedLocalSymbols
+    return this.http.get<Cases[]>(`${casesApiUrl}${like}`)
       .pipe(
         tap(cases => console.log('fetched cases')),
         catchError(this.handleError([]))
@@ -64,7 +81,7 @@ export class ApiService {
   }
 
   getStatistic(status: string): Observable<Statistic> {
-    const url = `${statisticsApiUrl}?label_like=${status}`;
+    const url = `${statisticsApiUrl}?label=${status}`;
     return this.http.get<Statistic>(url).pipe(
       tap(_ => console.log(`fetched statistic status=${status}`)),
       catchError(this.handleError<Statistic>())
