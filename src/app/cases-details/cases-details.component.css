@@ -1,7 +1,6 @@
 .cases-container {
   position: relative;
-  padding: 5px;
-}
+  padding: 5px; }
 
 .cases-loading-shade {
   position: absolute;
@@ -13,11 +12,6 @@
   z-index: 1;
   display: flex;
   align-items: center;
-  justify-content: center;
-}
-
-.mat-flat-button {
-  margin: 5px;
-}
+  justify-content: center; }
 
 /*# sourceMappingURL=cases-details.component.css.map */

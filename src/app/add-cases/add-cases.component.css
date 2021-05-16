@@ -1,28 +1,19 @@
-.example-container {
+.cases-container {
   position: relative;
-  padding: 5px;
-}
+  padding: 5px; }
 
-.example-form {
+.cases-form {
   min-width: 150px;
   max-width: 500px;
-  width: 100%;
-}
+  width: 100%; }
 
-.example-full-width {
-  width: 100%;
-}
+.cases-full-width {
+  width: 100%; }
 
-.example-full-width:nth-last-child(0) {
-  margin-bottom: 10px;
-}
+.cases-full-width:nth-last-child(0) {
+  margin-bottom: 10px; }
 
 .cases-row {
-  margin: 10px 0;
-}
-
-.mat-flat-cases {
-  margin: 5px;
-}
+  margin: 10px 0; }
 
 /*# sourceMappingURL=add-cases.component.css.map */
