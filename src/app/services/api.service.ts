@@ -21,13 +21,6 @@ export class ApiService {
     this.http = http;
   }
 
-  private handleError<T>(result?: T): (error: any) => Observable<T> {
-    return (error: any): Observable<T> => {
-      console.error(error);
-      return of(result as T);
-    };
-  }
-
   getCases(): Observable<Cases[]> {
     // noinspection JSUnusedLocalSymbols
     return this.http.get<Cases[]>(`${casesApiUrl}`)
@@ -66,5 +59,12 @@ export class ApiService {
       tap(_ => console.log(`deleted cases id=${id}`)),
       catchError(this.handleError<Cases>())
     );
+  }
+
+  private handleError<T>(result?: T): (error: any) => Observable<T> {
+    return (error: any): Observable<T> => {
+      console.error(error);
+      return of(result as T);
+    };
   }
 }

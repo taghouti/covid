@@ -1,22 +1,28 @@
 .example-container {
   position: relative;
-  padding: 5px; }
+  padding: 5px;
+}
 
 .example-form {
   min-width: 150px;
   max-width: 500px;
-  width: 100%; }
+  width: 100%;
+}
 
 .example-full-width {
-  width: 100%; }
+  width: 100%;
+}
 
 .example-full-width:nth-last-child(0) {
-  margin-bottom: 10px; }
+  margin-bottom: 10px;
+}
 
 .cases-row {
-  margin: 10px 0; }
+  margin: 10px 0;
+}
 
 .mat-flat-cases {
-  margin: 5px; }
+  margin: 5px;
+}
 
 /*# sourceMappingURL=add-cases.component.css.map */

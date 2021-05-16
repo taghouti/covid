@@ -1,7 +1,9 @@
 {
-"version": 3,
-"mappings": "AAAA,kBAAmB;EACjB,QAAQ,EAAE,QAAQ;EAClB,OAAO,EAAE,GAAG;;AAGd,aAAc;EACZ,SAAS,EAAE,KAAK;EAChB,SAAS,EAAE,KAAK;EAChB,KAAK,EAAE,IAAI;;AAGb,mBAAoB;EAClB,KAAK,EAAE,IAAI;;AAGb,qCAAsC;EACpC,aAAa,EAAE,IAAI;;AAGrB,UAAW;EACT,MAAM,EAAE,MAAM;;AAGhB,eAAgB;EACd,MAAM,EAAE,GAAG",
-"sources": ["add-cases.component.scss"],
-"names": [],
-"file": "add-cases.component.css"
+  "version": 3,
+  "mappings": "AAAA,kBAAmB;EACjB,QAAQ,EAAE,QAAQ;EAClB,OAAO,EAAE,GAAG;;AAGd,aAAc;EACZ,SAAS,EAAE,KAAK;EAChB,SAAS,EAAE,KAAK;EAChB,KAAK,EAAE,IAAI;;AAGb,mBAAoB;EAClB,KAAK,EAAE,IAAI;;AAGb,qCAAsC;EACpC,aAAa,EAAE,IAAI;;AAGrB,UAAW;EACT,MAAM,EAAE,MAAM;;AAGhB,eAAgB;EACd,MAAM,EAAE,GAAG",
+  "sources": [
+    "add-cases.component.scss"
+  ],
+  "names": [],
+  "file": "add-cases.component.css"
 }
