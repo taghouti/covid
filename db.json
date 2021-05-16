@@ -1,0 +1,44 @@
+{
+  "cases": [
+    {
+      "name": "Jhon doe",
+      "gender": "Female",
+      "age": 60,
+      "address": "8 Street x",
+      "city": "Tunis",
+      "country": "Tunisia",
+      "status": "Recovered",
+      "id": 1
+    },
+    {
+      "name": "Taghouti Tarek",
+      "gender": "Male",
+      "age": 28,
+      "address": "aaa",
+      "city": "M2",
+      "country": "aaa",
+      "status": "Dead",
+      "id": 2
+    },
+    {
+      "name": "Taghouti Tarek",
+      "gender": "Male",
+      "age": 28,
+      "address": "aaa",
+      "city": "M2",
+      "country": "aaa",
+      "status": "Recovered",
+      "id": 3
+    },
+    {
+      "name": "Taghouti Tarek",
+      "gender": "Male",
+      "age": 2,
+      "address": "aaa",
+      "city": "M2",
+      "country": "aaa",
+      "status": "Dead",
+      "id": 4
+    }
+  ]
+}
