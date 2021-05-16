@@ -1,10 +1,8 @@
-//noinspection DuplicatedCode
 .cases-container {
   position: relative;
   padding: 5px;
 }
 
-//noinspection DuplicatedCode
 .cases-loading-shade {
   position: absolute;
   top: 0;
@@ -17,3 +15,5 @@
   align-items: center;
   justify-content: center;
 }
+
+/*# sourceMappingURL=cases-stat.component.css.map */

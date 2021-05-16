@@ -3,13 +3,15 @@ import {HttpClient, HttpHeaders} from '@angular/common/http';
 import {Observable, of} from 'rxjs';
 import {catchError, tap} from 'rxjs/operators';
 import {Cases} from '../models/cases';
+import {Statistic} from '../models/statistic';
 
 const httpOptions = {
   headers: new HttpHeaders({'Content-Type': 'application/json'})
 };
 
 const apiUrl = 'http://localhost:3000/';
-const casesApiUrl = apiUrl + 'cases/';
+const casesApiUrl = apiUrl + 'cases';
+const statisticsApiUrl = apiUrl + 'statistics';
 
 @Injectable({
   providedIn: 'root'
@@ -19,13 +21,6 @@ export class ApiService {
 
   constructor(private http: HttpClient) {
     this.http = http;
-  }
-
-  private handleError<T>(result?: T): (error: any) => Observable<T> {
-    return (error: any): Observable<T> => {
-      console.error(error);
-      return of(result as T);
-    };
   }
 
   getCases(): Observable<Cases[]> {
@@ -66,5 +61,20 @@ export class ApiService {
       tap(_ => console.log(`deleted cases id=${id}`)),
       catchError(this.handleError<Cases>())
     );
+  }
+
+  getStatistic(status: string): Observable<Statistic> {
+    const url = `${statisticsApiUrl}?label_like=${status}`;
+    return this.http.get<Statistic>(url).pipe(
+      tap(_ => console.log(`fetched statistic status=${status}`)),
+      catchError(this.handleError<Statistic>())
+    );
+  }
+
+  private handleError<T>(result?: T): (error: any) => Observable<T> {
+    return (error: any): Observable<T> => {
+      console.error(error);
+      return of(result as T);
+    };
   }
 }

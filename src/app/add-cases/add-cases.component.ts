@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {Router} from '@angular/router';
 import {ApiService} from '../services/api.service';
-import {FormControl, FormGroupDirective, FormBuilder, FormGroup, NgForm, Validators} from '@angular/forms';
+import {FormBuilder, FormControl, FormGroup, FormGroupDirective, NgForm, Validators} from '@angular/forms';
 import {ErrorStateMatcher} from '@angular/material/core';
 
 export class MyErrorStateMatcher implements ErrorStateMatcher {
@@ -39,13 +39,13 @@ export class AddCasesComponent implements OnInit {
 
   ngOnInit(): void {
     this.casesForm = this.formBuilder.group({
-      name : [null, Validators.required],
-      gender : [null, Validators.required],
-      age : [null, Validators.required],
-      address : [null, Validators.required],
-      city : [null, Validators.required],
-      country : [null, Validators.required],
-      status : [null, Validators.required]
+      name: [null, Validators.required],
+      gender: [null, Validators.required],
+      age: [null, Validators.required],
+      address: [null, Validators.required],
+      city: [null, Validators.required],
+      country: [null, Validators.required],
+      status: [null, Validators.required]
     });
   }
 

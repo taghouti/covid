@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import { ApiService } from '../services/api.service';
-import { Cases } from '../models/cases';
+import {Component, OnInit} from '@angular/core';
+import {ApiService} from '../services/api.service';
+import {Cases} from '../models/cases';
 
 @Component({
   selector: 'app-cases',

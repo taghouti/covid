@@ -3,7 +3,7 @@ import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute, Router} from '@angular/router';
 import {ApiService} from '../services/api.service';
 import {Cases} from '../models/cases';
-import { DatePipe } from '@angular/common';
+import {DatePipe} from '@angular/common';
 
 @Component({
   selector: 'app-cases-details',
@@ -15,7 +15,7 @@ export class CasesDetailsComponent implements OnInit {
 
   currentDate = new Date();
 
-  cases: Cases = { id: 0, name: '', gender: '', age: 0, address: '', city: '', country: '', status: '', updated: this.currentDate };
+  cases: Cases = {id: 0, name: '', gender: '', age: 0, address: '', city: '', country: '', status: '', updated: this.currentDate};
   isLoadingResults = true;
 
   constructor(private route: ActivatedRoute, private api: ApiService, private router: Router) {
