@@ -6,7 +6,7 @@
   </div>
   <mat-form-field class="cases-full-width">
     <mat-label>Gender</mat-label>
-    <mat-select [(value)]="gender" (valueChange)="genderChanged()">
+    <mat-select (valueChange)="genderChanged()" [(value)]="gender">
       <!-- todo: (ngFor) Vous devez appliquer les directives de structures « *ngFor » et « *ngIf » -->
       <mat-option *ngFor="let gl of genderList" [value]="gl">
         <!-- todo: (binding) interpolation -->
@@ -17,7 +17,7 @@
   <mat-form-field class="cases-full-width">
     <mat-label>Status</mat-label>
     <!-- todo: (binding) event binding -->
-    <mat-select [(value)]="status" (valueChange)="statusChanged()">
+    <mat-select (valueChange)="statusChanged()" [(value)]="status">
       <!-- todo: (binding) property binding -->
       <mat-option *ngFor="let sl of statusList" [value]="sl">
         {{sl}}
@@ -28,16 +28,16 @@
   <mat-form-field>
     <mat-label>Search</mat-label>
     <label>
-    <!-- todo: (binding) two way binding -->
-    <input
-      matInput
-      [(ngModel)]="search"
-      id="search"
-      (keyup)="callOnEnter($event)"
-      type="search"
-      class="form-control"
-      placeholder="Search name"
-    />
+      <!-- todo: (binding) two way binding -->
+      <input
+        (keyup)="callOnEnter($event)"
+        [(ngModel)]="search"
+        class="form-control"
+        id="search"
+        matInput
+        placeholder="Search name"
+        type="search"
+      />
     </label>
     <mat-icon id="search-icon">search</mat-icon>
   </mat-form-field>
