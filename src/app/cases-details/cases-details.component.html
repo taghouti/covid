@@ -1,13 +1,7 @@
 <div class="cases-container mat-elevation-z8">
-  <h2>Corona Virus Cases Details</h2>
   <div *ngIf="isLoadingResults"
        class="cases-loading-shade">
     <mat-spinner *ngIf="isLoadingResults"></mat-spinner>
-  </div>
-  <div class="button-row">
-    <a [routerLink]="['/cases']" color="primary" mat-flat-button>
-      <mat-icon>restore</mat-icon>
-      Go Back</a>
   </div>
   <mat-card class="cases-card">
     <mat-card-header>

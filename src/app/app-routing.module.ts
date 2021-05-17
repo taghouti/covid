@@ -9,6 +9,7 @@ import {CasesListComponent} from './cases-list/cases-list.component';
 
 // todo: (routing) Configurez les routes et liens nécessaires à votre application
 const routes: Routes = [
+  {path: '',  component: CasesComponent, pathMatch: 'full'},
   {
     path: 'cases',
     component: CasesComponent,
