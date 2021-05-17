@@ -1,0 +1,11 @@
+<div class="col-md-3">
+  <div class="card" style="width: 18rem;">
+    <div class="card-body">
+      <h5 class="card-title">{{ caseDetails?.name }}</h5>
+      <p class="card-text"> Age: {{caseDetails?.age}} - {{caseDetails?.gender}}</p>
+      <button (click)="delete()" class="btn btn-danger mr-1" style="float: right">
+        Delete
+      </button>
+    </div>
+  </div>
+</div>
