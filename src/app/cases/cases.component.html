@@ -4,7 +4,7 @@
 </div>
 <mat-form-field class="cases-full-width">
   <mat-label>Gender</mat-label>
-  <mat-select (valueChange)="genderChanged()" [(value)]="gender">
+  <mat-select (selectionChange)="genderChanged()" [(value)]="gender">
     <!-- todo: (ngFor) Vous devez appliquer les directives de structures « *ngFor » et « *ngIf » -->
     <mat-option *ngFor="let gl of genderList" [value]="gl">
       <!-- todo: (binding) interpolation -->
@@ -15,7 +15,7 @@
 <mat-form-field class="cases-full-width">
   <mat-label>Status</mat-label>
   <!-- todo: (binding) event binding -->
-  <mat-select (valueChange)="statusChanged()" [(value)]="status">
+  <mat-select (selectionChange)="statusChanged()" [(value)]="status">
     <!-- todo: (binding) property binding -->
     <mat-option *ngFor="let sl of statusList" [value]="sl">
       {{sl}}
