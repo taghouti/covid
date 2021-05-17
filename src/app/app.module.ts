@@ -27,6 +27,8 @@ import {AddCasesComponent} from './add-cases/add-cases.component';
 import {EditCasesComponent} from './edit-cases/edit-cases.component';
 import {CasesStatComponent} from './cases-stat/cases-stat.component';
 import {ChartsModule} from 'ng2-charts';
+import {CasesListComponent} from './cases-list/cases-list.component';
+import {CasesListElementComponent} from './cases-list-element/cases-list-element.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +37,9 @@ import {ChartsModule} from 'ng2-charts';
     CasesDetailsComponent,
     AddCasesComponent,
     EditCasesComponent,
-    CasesStatComponent
+    CasesStatComponent,
+    CasesListComponent,
+    CasesListElementComponent
   ],
   imports: [
     BrowserModule,

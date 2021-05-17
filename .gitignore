@@ -45,8 +45,9 @@ testem.log
 .DS_Store
 Thumbs.db
 
-src/app/.sass-cache/
-src/app/edit-cases/.sass-cache/
-src/app/add-cases/.sass-cache/
-src/app/cases-details/.sass-cache/
-src/app/cases/.sass-cache/
+/src/app/.sass-cache/
+/src/app/edit-cases/.sass-cache/
+/src/app/add-cases/.sass-cache/
+/src/app/cases-details/.sass-cache/
+/src/app/cases/.sass-cache/
+/src/app/cases-stat/.sass-cache/

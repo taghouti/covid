@@ -1,3 +1,4 @@
+// todo: (model) Créez un modèle de données pour lequel vous allez créer les méthodes CRUD
 export class Cases {
   public id!: number;
   public name!: string;

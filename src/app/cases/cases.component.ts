@@ -13,16 +13,19 @@ export class CasesComponent implements OnInit {
   displayedColumns: string[] = ['name', 'age', 'status'];
   data: Cases[] = [];
   isLoadingResults = true;
+  // todo: (binding) two way binding
   search = '';
   gender = '';
   status = '';
   statusList = ['All', 'Positive', 'Dead', 'Recovered'];
+  // todo: (binding) interpolation
   genderList = ['All', 'Male', 'Female'];
 
   constructor(private api: ApiService) {
     this.api = api;
   }
 
+  // todo: (search) Votre application doit contenir au moins une fonctionnalité de recherche multicritère
   loadMatTable(): void {
     this.api.getCases(this.search, this.status, this.gender)
       .subscribe((res: any) => {
@@ -45,6 +48,7 @@ export class CasesComponent implements OnInit {
     }
   }
 
+  // todo: (binding) event binding
   statusChanged(): void {
     this.loadMatTable();
   }
