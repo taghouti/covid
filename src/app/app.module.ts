@@ -22,6 +22,8 @@ import {MatSliderModule} from '@angular/material/slider';
 import {MatSlideToggleModule} from '@angular/material/slide-toggle';
 import {MatButtonToggleModule} from '@angular/material/button-toggle';
 import {MatSelectModule} from '@angular/material/select';
+import {MatMenuModule} from '@angular/material/menu';
+import {MatToolbarModule} from '@angular/material/toolbar';
 import {CasesDetailsComponent} from './cases-details/cases-details.component';
 import {AddCasesComponent} from './add-cases/add-cases.component';
 import {EditCasesComponent} from './edit-cases/edit-cases.component';
@@ -62,6 +64,9 @@ import {CasesListElementComponent} from './cases-list-element/cases-list-element
     MatSlideToggleModule,
     MatButtonToggleModule,
     MatSelectModule,
+    MatSelectModule,
+    MatMenuModule,
+    MatToolbarModule,
     ChartsModule
   ],
   providers: [],

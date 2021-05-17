@@ -41,17 +41,6 @@
     </label>
     <mat-icon id="search-icon">search</mat-icon>
   </mat-form-field>
-  <div class="button-row">
-    <a [routerLink]="['/add-cases']" color="primary" mat-flat-button>
-      <mat-icon>add</mat-icon>
-      Cases</a>
-    <a [routerLink]="['/cases-stat']" color="accent" mat-flat-button>
-      <mat-icon>bar_chart</mat-icon>
-      Statistic</a>
-    <a [routerLink]="['/cases-list']" color="warn" mat-flat-button>
-      <mat-icon>list</mat-icon>
-      List</a>
-  </div>
   <div class="mat-elevation-z8">
     <table [dataSource]="data" class="cases-table" mat-table
            matSort matSortActive="name" matSortDirection="asc" matSortDisableClear>
