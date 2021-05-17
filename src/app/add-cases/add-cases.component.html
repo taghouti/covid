@@ -5,11 +5,6 @@
        class="cases-loading-shade">
     <mat-spinner *ngIf="isLoadingResults"></mat-spinner>
   </div>
-  <div class="button-row">
-    <a [routerLink]="['/cases']" color="primary" mat-flat-button>
-      <mat-icon>restore</mat-icon>
-      Go Back</a>
-  </div>
   <mat-card class="cases-card">
     <form (ngSubmit)="onFormSubmit()" [formGroup]="casesForm">
       <mat-form-field class="cases-full-width">
