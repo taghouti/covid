@@ -1,14 +1,8 @@
 <div class="cases-container mat-elevation-z8">
-  <h2>Corona Virus Add Cases</h2>
   <!-- todo: (ngIf) Vous devez appliquer les directives de structures « *ngFor » et « *ngIf » -->
   <div *ngIf="isLoadingResults"
        class="cases-loading-shade">
     <mat-spinner *ngIf="isLoadingResults"></mat-spinner>
-  </div>
-  <div class="button-row">
-    <a [routerLink]="['/cases']" color="primary" mat-flat-button>
-      <mat-icon>restore</mat-icon>
-      Go Back</a>
   </div>
   <mat-card class="cases-card">
     <form (ngSubmit)="onFormSubmit()" [formGroup]="casesForm">
